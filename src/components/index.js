@@ -95,7 +95,13 @@ export default class PersonalNotesApp extends React.Component {
           <section>
             <h2>Catatan Active</h2>
             <div className={styles.card_list}>
-              {data
+              {
+                data
+                .filter(
+                  (value) =>
+                    value.title.includes(this.state.title) && !value.archived
+                ).length ? 
+                data
                 .filter(
                   (value) =>
                     value.title.includes(this.state.title) && !value.archived
@@ -111,13 +117,21 @@ export default class PersonalNotesApp extends React.Component {
                     onArchivedToggle={this.onArchivedToggle}
                     onDelete={this.onDelete}
                   />
-                ))}
+                )):
+                <p>Catatan Kosong</p>
+              }
             </div>
           </section>
           <section>
             <h2>Arsip</h2>
             <div className={styles.card_list}>
-              {data
+              {
+                data
+                .filter(
+                  (value) =>
+                    value.title.includes(this.state.title) && value.archived
+                ).length ? 
+                data
                 .filter(
                   (value) =>
                     value.title.includes(this.state.title) && value.archived
@@ -133,7 +147,9 @@ export default class PersonalNotesApp extends React.Component {
                     onArchivedToggle={this.onArchivedToggle}
                     onDelete={this.onDelete}
                   />
-                ))}
+                )):
+                <p>Catatan Kosong</p>
+              }
             </div>
           </section>
         </main>
