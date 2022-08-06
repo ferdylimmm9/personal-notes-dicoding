@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a66cff;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+}
+.search_bar {
+  border-radius: 8px;
+  border: 2px solid #9c9efe;
+  padding: 1em;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 4px;
+  max-height: 500px;
+  margin: auto;
+}
+button {
+  padding: 1em;
+  background-color: transparent;
+  border: none;
+  min-width: 150px;
+}
+.red {
+  color: red;
+  border-radius: 4px;
+  opacity: 0.7;
+  font-weight: 600;
+}
+.red:hover {
+  opacity: 1;
+}
+.yellow {
+  color: orange;
+  border-radius: 4px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.yellow:hover {
+  opacity: 1;
+}
+.card {
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+.card_action {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+textarea {
+  border-radius: 8px;
+  padding: 1em;
+  resize: horizontal;
+  border: 2px solid #9c9efe;
+  height: 200px;
+}
+input[type="submit"] {
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #9c9efe;
+  color: white;
+  font-weight: 600;
+  opacity: 1;
+}
+input[type="submit"]:hover {
+  opacity: 0.7;
+}
+.info {
+  align-self: flex-end;
+  color: gray;
+  opacity: 0.7;
+}
+section {
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  gap: 8px;
+}
+.card_list {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.date {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: gray;
+  opacity: 0.7;
+}
+footer {
+  background-color: #a66cff;
+  padding: 1rem;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+main {
+  padding: 40px 16px;
+}
